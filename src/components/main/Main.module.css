@@ -1,0 +1,168 @@
+.Map {
+  /* existing styles */
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.MapArea {
+  /* existing styles */
+}
+.MapList {
+  display: flex;
+  flex-direction: column;
+  max-height: 95vh;
+  /* scrollbar */
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(38, 209, 11, 0.2) transparent;
+}
+.MapList::-webkit-scrollbar {
+  width: 5px;
+}
+.MapList::-webkit-scrollbar-track {
+  background: transparent;
+}
+.MapList::-webkit-scrollbar-thumb {
+  background-color: rgba(38, 209, 11, 0.2);
+  border-radius: 20px;
+  border: transparent;
+}
+.mapItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.mapItem:hover {
+  background-color: rgba(9, 174, 0, 0.746);
+}
+.mapItemImage {
+  border-radius: 10px;
+  margin-right: 20px;
+  /* max-height: 64; */
+}
+.mapItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100%;
+}
+.mapItemTitle {
+  font-size: 20px;
+  font-weight: 600;
+  /* margin-bottom: 10px; */
+}
+.mapItemDescription {
+  font-size: 14px;
+  font-weight: 400;
+  /* margin-bottom: 10px; */
+}
+.useArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.useSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0.1rem;
+}
+.useAdd {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0.1rem;
+}
+.campaign {
+  /* existing styles */
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.chat {
+  /* existing styles */
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 50vw;
+  min-width: 50vw;
+
+  /* center self */
+  margin: 0 auto;
+}
+.chatList {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  /* scrollbar */
+  /* overflow-y: scroll; */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(38, 209, 11, 0.2) transparent;
+}
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* width: 100%; */
+  min-height: 100vh;
+}
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.messageAvatar {
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.messageAvatar > img {
+  border-radius: 50%;
+}
+.messageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100%;
+}
+.messageName {
+  font-size: 20px;
+  font-weight: 600;
+  /* margin-bottom: 10px; */
+}
+.messageText {
+  font-size: 14px;
+  font-weight: 400;
+  /* margin-bottom: 10px; */
+}
+.chatInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0.1rem;
+}

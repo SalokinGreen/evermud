@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 6rem; */
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+.mapArea {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+}
+.contentArea {
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+}
+.sidebarArea {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+}
