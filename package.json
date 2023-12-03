@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.8.7",
+    "@supabase/auth-ui-react": "^0.4.6",
+    "@supabase/auth-ui-shared": "^0.1.8",
+    "@supabase/supabase-js": "^2.39.0",
     "axios": "^1.6.2",
     "nai-js-tokenizer": "^1.0.1",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "supabase": "^1.115.4"
   },
   "devDependencies": {
     "eslint": "^8",
