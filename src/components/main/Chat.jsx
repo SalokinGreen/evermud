@@ -13,12 +13,15 @@ export default function Chat({
   handleEditChat,
   handleGenerate,
   generating,
+  handleSend,
+  handleDelete,
 }) {
   const [contextMenu, setContextMenu] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [aktiveMessage, setAktiveMessage] = useState(null);
   const [dialog, setDialog] = useState(false);
   const [dialogText, setDialogText] = useState("");
+  const [message, setMessage] = useState("");
   function onContext(event, message) {
     event.preventDefault();
     setContextMenu(true);
@@ -55,6 +58,14 @@ export default function Chat({
     setEditable(aktiveMessage);
     setContextMenu(false);
   }
+  function onChange(e) {
+    setMessage(e.target.value);
+  }
+  function handleSendMessage() {
+    if (message === "") return;
+    setMessage("");
+    handleSend(message, "text");
+  }
 
   return (
     <div className={styles.chat}>
@@ -70,8 +81,12 @@ export default function Chat({
         ))}
       </div>
       <div className={styles.chatInput}>
-        <Input placeholder="Type a message..." />
-        <Button>Send</Button>
+        <Input
+          placeholder="Type a message..."
+          value={message}
+          onChange={onChange}
+        />
+        <Button onClick={handleSendMessage}>Send</Button>
       </div>
       {dialog && (
         <DialogInput
@@ -87,7 +102,9 @@ export default function Chat({
       {contextMenu && (
         <Menu position={position} onClose={() => setContextMenu(false)}>
           <MenuItem>Copy</MenuItem>
-          <MenuItem>Delete</MenuItem>
+          <MenuItem onClick={() => handleDelete(aktiveMessage)}>
+            Delete
+          </MenuItem>
           <MenuItem>Speak</MenuItem>
           <MenuItem onClick={handleEdit}>Edit</MenuItem>
           <MenuItem onClick={handleRewrite}>Rewrite</MenuItem>
